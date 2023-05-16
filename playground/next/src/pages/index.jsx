@@ -19,6 +19,14 @@ export default function Home() {
                     }}>
                     Toast error
                 </button>
+
+                <button
+                    type="button"
+                    onClick={async () => {
+                        await axios.get('/api/toasts/success')
+                    }}>
+                    Toast success
+                </button>
             </main>
         </>
     )
