@@ -19,7 +19,7 @@ class ForwardFlashIntoResponseData
 
         $sessionData = session()->all();
         $flashData = collect($sessionData['_flash']['old'])->map(function ($key) use ($sessionData) {
-            return ['key' => $key, 'data' => $sessionData[$key]];
+            return ['name' => $key, 'value' => $sessionData[$key]];
         });
 
         $body = [
